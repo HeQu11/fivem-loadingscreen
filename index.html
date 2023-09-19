@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="PL">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>HeQu LoadinScreen - Version 0.2</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+<div class="whole"></div>
+    <div class="outer">
+        <div class="box">
+            <div class="box-inside">
+            <h1>ROLEPLAY REVOLUTION</h1>
+            <img  class="logo" src="assets/logo.png">
+             <!--
+            <div class="logosin">
+            <h2>🎮 Najlepsza wydajność i optymalizacja</h2>
+            </div>
+            <div class="logosin">
+                <h2>🚓 Świetnie zbalansowany system kryminalny i wymiaru sprawiedliwości</h2>
+                </div>
+                <div class="logosin">
+                    <h2>🤝 Aktywna społeczność graczy i profesjonalne podejście administracji</h2>
+                    </div>
+                    <div class="logosin">
+                        <h2>💰 Realistyczna ekonomia gwarantuje emocjonującą rozgrywkę</h2>
+                        </div>
+                    -->
+                    <button onclick="window.invokeNative('openUrl', 'https://notmyurl.de/');">SKLEP</button>
+                    <button onclick="window.invokeNative('openUrl', 'https://notmyurl.de/');">STRONA</button>
+                    <button onclick="window.invokeNative('openUrl', 'https://notmyurl.de/');">FAQ</button>
+                    <h2 class="info-browser">(PO KLIKNIĘCIU W PRZYCISK ZOSTANIE OTWARTA TWOJA DOMYŚLNA PRZEGLĄDARKA)</h2>
+                        
+        </div>
+        
+        <div class="music-info">
+            <h2> Money In The Grave (feat. Rick Ross)</h2>
+            <h3>Drake • The Best In The World Pack • 2019</h3>
+            </div>
+        </div>
+
+        <audio
+            src="assets/music.mp3"
+            type="audio/mp3"
+            autoplay="true"
+            looped="true"
+        ></audio>
+        <div class="loading">
+            <h4 class="randoms"></h4>
+        <div class="loadbar"><div class="thingy"></div></div>
+    </div>
+    
+        <script type="text/javascript">
+            let count = 0;
+            let thisCount = 0;
+
+            const handlers = {
+                startInitFunctionOrder(data) {
+                    count = data.count;
+                },
+
+                initFunctionInvoking(data) {
+                    document.querySelector('.thingy').style.left = '0%';
+                    document.querySelector('.thingy').style.width =
+                        (data.idx / count) * 100 + '%';
+                },
+
+                startDataFileEntries(data) {
+                    count = data.count;
+                },
+
+                performMapLoadFunction(data) {
+                    ++thisCount;
+
+                    document.querySelector('.thingy').style.left = '0%';
+                    document.querySelector('.thingy').style.width =
+                        (thisCount / count) * 100 + '%';
+                },
+            };
+
+            window.addEventListener('message', function (e) {
+                (handlers[e.data.eventName] || function () {})(e.data);
+            });
+
+            var words = ["Ładowanie pojazdów...", "Ładowanie budynków...", "Ładowanie Frameworka...", "Ładowanie tekstur...", "Ładowanie Bazy Danych...", "Ładowanie mapy...", "Ładowanie dźwięków..."];
+
+window.addEventListener("load", function() {
+		var randoms = window.document.getElementsByClassName("randoms");
+		for (i = 0; i < randoms.length; i++)
+				changeWord(randoms[i]);
+}, false);
+
+function changeWord(a) {
+		a.style.opacity = '0.1';
+		a.innerHTML = words[getRandomInt(0, words.length - 1)];
+		setTimeout(function() {
+				a.style.opacity = '1';
+		}, 725);
+		setTimeout(function() {
+				changeWord(a);
+		}, getRandomInt(1500, 2500));
+}
+
+
+function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+        </script>
+    </body>
+</html>

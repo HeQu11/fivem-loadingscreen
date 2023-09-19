@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Open+Sans:wght@300&family=Roboto:wght@900&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+html {
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  margin: auto;
+  background-color: #202122;
+  background-image: conic-gradient(from var(--border-angle), transparent 20%, rgb(255, 174, 0), rgb(255, 220, 25));
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 6s linear infinite;
+}
+
+.whole {
+  border-radius: 8px;
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  display: block;
+  justify-content: space-around;
+  margin: 10px;
+  background-color: #202122;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.outer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.logosin {
+  position: relative;
+  margin-top: 1%;
+}
+
+.logosin img {
+  position: relative;
+  width: 45px;
+  height: 35px;
+  text-align: left;
+}
+
+.info-browser {
+  opacity: 8%;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.logosin h2 {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 22px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffc400;
+  font-family: "Inter", sans-serif;
+}
+
+h4 {
+  position: absolute;
+  margin: auto;
+  top: 96%;
+  margin-left: 2%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #ffc400;
+  transition: opacity 0.75s;
+}
+
+.box {
+  display: inline-block;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 15%;
+  border-radius: 15px;
+  color: white;
+  width: 1200px;
+  height: 510px;
+  background-image: conic-gradient(from var(--border-angle), transparent 20%, rgb(255, 174, 0), rgb(255, 220, 25));
+  background-size: calc(100% - var(--border-size) * 1) calc(100% - var(--border-size) * 1), cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 6s linear infinite;
+}
+
+.box-inside {
+  position: relative;
+  top: 1.5%;
+  margin-top: -2px;
+  display: inline-block;
+  justify-content: space-around;
+  margin: auto;
+  border-radius: 15px;
+  color: white;
+  width: 1190px;
+  height: 495px;
+  background-color: rgb(36, 31, 31);
+}
+
+.test {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.music-info {
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 25%;
+  font-size: 20px;
+}
+
+.behindbar {
+  background-image: conic-gradient(from var(--border-angle), transparent 20%, rgb(255, 174, 0), rgb(255, 220, 25));
+  background-size: calc(100% - var(--border-size) * 1) calc(100% - var(--border-size) * 1), cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 6s linear infinite;
+  height: 2vh;
+}
+
+.loadbar {
+  border-radius: 35px;
+  margin-bottom: 2px;
+  position: absolute;
+  bottom: 0.6%;
+  width: 98%;
+  background-color: rgb(35, 35, 35);
+  height: 1.5vh;
+  left: 20px;
+}
+
+.thingy {
+  border-radius: 35px;
+  width: 10%;
+  background: linear-gradient(90deg, #f39c12, #ffee00);
+  background-size: 200% 100%;
+  height: 1.5vh;
+  position: absolute;
+  animation: fill 2s infinite alternate;
+}
+
+@keyframes fill {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+.status i {
+  color: #00a2ff;
+  font-size: 17px;
+}
+
+button {
+  margin-top: 2%;
+  font-family: "Roboto", sans-serif;
+  width: 240px;
+  background-image: linear-gradient(92.88deg, #F7971E 9.16%, #f8b90b 64.72%);
+  margin-inline: 5px;
+  border-radius: 2px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #33363a;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  transition: all 0.5s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  transition-duration: 0.1s;
+  width: 260px;
+  height: 4.5rem;
+}/*# sourceMappingURL=style.css.map */
